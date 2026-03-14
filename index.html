@@ -3,67 +3,248 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ödeme | Turhan Akaryakıt</title>
-  <meta name="description" content="Turhan Akaryakıt ödeme, WhatsApp ve konum sayfası." />
+  <title>Turhan Akaryakıt | Petrol Ofisi & BP Bayii | Karapınar Konya</title>
+  <meta name="description" content="Turhan Akaryakıt Karapınar Konya'da Petrol Ofisi ve BP markalarıyla hizmet veren modern akaryakıt istasyonu, market, Tchibo, UTTS ve ödeme sayfası." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header class="topbar simple-topbar">
+  <header class="topbar">
     <div class="container topbar-inner">
-      <a href="../index.html" class="logo">
-        <img src="../assets/img/turhan-logo.png" alt="Turhan Akaryakıt Logo" />
+      <a href="#anasayfa" class="logo">
+        <img src="assets/img/turhan-logo.png" alt="Turhan Akaryakıt Logo" />
       </a>
-      <nav class="nav nav-static">
-        <a href="../index.html">Ana Sayfa</a>
-        <a href="../index.html#iletisim">İletişim</a>
+
+      <nav class="nav" id="nav">
+        <a href="#anasayfa">Ana Sayfa</a>
+        <a href="#hakkimizda">Hakkımızda</a>
+        <a href="#hizmetler">Hizmetler</a>
+        <a href="#market">Market Plus</a>
+        <a href="#utts">UTTS</a>
+        <a href="odeme/">Ödeme</a>
+        <a href="#iletisim">İletişim</a>
       </nav>
+
+      <div class="top-actions">
+        <a class="mini-btn" href="tel:03327557434">0332 755 74 34</a>
+        <a class="mini-btn whatsapp" href="https://wa.me/905336970531" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Menüyü aç">☰</button>
     </div>
   </header>
 
-  <main class="payment-page">
-    <section class="section payment-hero">
-      <div class="container payment-wrap">
-        <p class="section-tag">Ödeme</p>
-        <h1>Turhan Akaryakıt Ödeme Sayfası</h1>
-        <p class="muted payment-note">
-          Bu sayfa <strong>turhanpetrol.com/odeme</strong> adresinde çalışır. Şu an hızlı erişim ve yönlendirme sayfası olarak hazırlandı.
-          Online kart tahsilatı istenirse ayrıca sanal pos entegrasyonu gerekir.
-        </p>
-
-        <div class="payment-grid">
-          <a class="payment-card" href="https://wa.me/905336970531" target="_blank" rel="noopener">
-            <div class="quick-icon">💬</div>
-            <h3>WhatsApp ile Ödeme Bilgisi</h3>
-            <p>0533 697 05 31 numarasından bizimle iletişime geçin.</p>
-          </a>
-          <a class="payment-card" href="tel:03327557434">
-            <div class="quick-icon">📞</div>
-            <h3>Sabit Hat</h3>
-            <p>0332 755 74 34 üzerinden bize ulaşın.</p>
-          </a>
-          <a class="payment-card" href="https://maps.app.goo.gl/qP37bb31LNHwsw4eA?g_st=ic" target="_blank" rel="noopener">
-            <div class="quick-icon">📍</div>
-            <h3>Konum</h3>
-            <p>İstasyona rota almak için haritayı açın.</p>
-          </a>
+  <main>
+    <section class="hero" id="anasayfa">
+      <div class="hero-overlay"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Karapınar / Konya</p>
+          <h1>Akaryakıt, Market Plus, Tchibo ve UTTS hizmetleri tek noktada.</h1>
+          <p class="hero-text">
+            Turhan Akaryakıt; Petrol Ofisi ve BP markalarıyla akaryakıt hizmeti sunan,
+            modern istasyon yapısı, market alanı, kahve noktası ve hızlı ulaşım kanallarıyla müşterilerine güven veren bir noktadır.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="odeme/">💳 Ödeme Yap</a>
+            <a class="btn btn-secondary" href="https://maps.app.goo.gl/qP37bb31LNHwsw4eA?g_st=ic" target="_blank" rel="noopener">📍 Konum Aç</a>
+            <a class="btn btn-secondary" href="https://wa.me/905336970531" target="_blank" rel="noopener">💬 WhatsApp</a>
+          </div>
+          <ul class="hero-points">
+            <li>Petrol Ofisi</li>
+            <li>BP</li>
+            <li>Market Plus</li>
+            <li>Tchibo</li>
+            <li>UTTS Bölge Anabayi</li>
+          </ul>
         </div>
 
-        <div class="payment-box">
-          <h2>Ödeme entegrasyonu notu</h2>
+        <div class="hero-panel">
+          <div class="hero-image-card glass">
+            <img src="assets/img/station-1.jpeg" alt="Turhan Akaryakıt istasyon görünümü" />
+          </div>
+          <div class="hero-stats">
+            <div class="stat-card glass">
+              <span>Sabit Hat</span>
+              <strong><a href="tel:03327557434">0332 755 74 34</a></strong>
+            </div>
+            <div class="stat-card glass">
+              <span>Cep / WhatsApp</span>
+              <strong><a href="tel:05336970531">0533 697 05 31</a></strong>
+            </div>
+            <div class="stat-card glass">
+              <span>Ödeme</span>
+              <strong><a href="odeme/">/odeme sayfası</a></strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quick-section">
+      <div class="container quick-grid">
+        <a class="quick-card" href="odeme/">
+          <div class="quick-icon">💳</div>
+          <h3>Ödeme</h3>
+          <p>Ödeme sayfasına hızlı geçiş yapın.</p>
+        </a>
+        <a class="quick-card" href="https://wa.me/905336970531" target="_blank" rel="noopener">
+          <div class="quick-icon">💬</div>
+          <h3>WhatsApp</h3>
+          <p>0533 697 05 31 üzerinden yazın.</p>
+        </a>
+        <a class="quick-card" href="https://maps.app.goo.gl/qP37bb31LNHwsw4eA?g_st=ic" target="_blank" rel="noopener">
+          <div class="quick-icon">📍</div>
+          <h3>Konum</h3>
+          <p>İstasyona tek tıkla rota alın.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="hakkimizda">
+      <div class="container two-col about-grid">
+        <div>
+          <p class="section-tag">Hakkımızda</p>
+          <h2>Turhan Akaryakıt, modern istasyon görünümüyle kurumsal ve güven veren hizmet sunar.</h2>
           <p>
-            Gerçek kredi kartı ödeme alma sistemi için iyzico, PayTR, Shopier veya banka sanal POS entegrasyonu kurulmalıdır.
-            Hazır sayfa eklendi; canlı tahsilat altyapısı ayrıca bağlanabilir.
+            İstasyon görselleriniz, marka logolarınız, market alanınız, Tchibo kahve noktanız, UTTS yetkili hizmet görselleriniz ve iletişim bilgileriniz doğrudan siteye işlendi.
           </p>
+          <p>
+            Site yapısı statiktir. Bu sayede hızlı açılır, cPanel'e kolay yüklenir ve <strong>turhanpetrol.com/odeme</strong> adresinde ayrı bir ödeme sayfası olarak çalışır.
+          </p>
+        </div>
+        <div class="about-card">
+          <img src="assets/img/station-2.jpeg" alt="Turhan Akaryakıt gece görünümü" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="hizmetler">
+      <div class="container">
+        <p class="section-tag center">Hizmetler</p>
+        <h2 class="center">İstasyon içinde öne çıkan hizmet alanları</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Akaryakıt Hizmeti</h3>
+            <p>Petrol Ofisi ve BP marka güvencesiyle kaliteli akaryakıt hizmeti.</p>
+          </article>
+          <article class="card">
+            <h3>Market Plus</h3>
+            <p>Atıştırmalıklar, içecekler ve market ürünleriyle yolculuğa hızlı destek.</p>
+          </article>
+          <article class="card">
+            <h3>Tchibo Kahve</h3>
+            <p>Tchibo kahve ve cafe alanı ile dinlenme deneyimini güçlendirir.</p>
+          </article>
+          <article class="card">
+            <h3>UTTS Bölge Anabayi</h3>
+            <p>UTTS montaj ve bilgilendirme alanı için kurumsal hizmet bölümü.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="markalar">
+      <div class="container">
+        <p class="section-tag center">Markalar</p>
+        <h2 class="center">İş ortaklarımız ve hizmet alanlarımız</h2>
+        <div class="brand-logos four-col">
+          <div class="brand-box"><img src="assets/img/bp-po.png" alt="BP ve Petrol Ofisi logoları" /></div>
+          <div class="brand-box stack-brand"><img src="assets/img/tchibo-logo.png" alt="Tchibo logo" class="tchibo-logo" /><span>Market Plus</span></div>
+          <div class="brand-box stack-brand"><img src="assets/img/utts-banner.png" alt="UTTS Yetkili Taşıt Montaj Servisi" class="utts-banner" /><span>UTTS Bölge Anabayi</span></div>
+          <div class="brand-box"><img src="assets/img/turhan-logo.png" alt="Turhan Akaryakıt logo" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="market">
+      <div class="container">
+        <p class="section-tag">Market Plus</p>
+        <h2>Market Plus ve Tchibo alanı</h2>
+        <p class="section-intro">Tchibo alanının altına Market Plus bilgisi ve market içi görseller eklendi.</p>
+        <div class="gallery market-gallery four">
+          <figure class="gallery-item"><img src="assets/img/market-1.jpeg" alt="Market içi görsel 1" /></figure>
+          <figure class="gallery-item"><img src="assets/img/market-2.jpeg" alt="Market içi görsel 2" /></figure>
+          <figure class="gallery-item"><img src="assets/img/market-3.jpeg" alt="Market içi görsel 3" /></figure>
+          <figure class="gallery-item"><img src="assets/img/cafe-1.jpeg" alt="Cafe ve oturma alanı" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="utts">
+      <div class="container two-col utts-grid">
+        <div>
+          <p class="section-tag">UTTS</p>
+          <h2>UTTS Bölge Anabayi</h2>
+          <p>
+            UTTS hizmet alanı market bölümünün altına eklendi. Yetkili taşıt montaj servisi bilgisi ve görsel alanı bu bölümde öne çıkarılır.
+          </p>
+          <div class="contact-list compact">
+            <span>✅ Yetkili Taşıt Montaj Servisi</span>
+            <span>✅ Bölge Anabayi Bilgilendirme Alanı</span>
+            <a href="https://wa.me/905336970531" target="_blank" rel="noopener">💬 UTTS için WhatsApp</a>
+          </div>
+        </div>
+        <div class="utts-boxes">
+          <div class="brand-box utts-visual"><img src="assets/img/utts-banner.png" alt="UTTS banner" /></div>
+          <div class="brand-box utts-visual"><img src="assets/img/utts-device.jpeg" alt="UTTS cihaz görseli" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="galeri">
+      <div class="container">
+        <p class="section-tag center">Galeri</p>
+        <h2 class="center">İstasyon, market ve sosyal alanlardan kareler</h2>
+        <div class="gallery wc-gallery three">
+          <figure class="gallery-item"><img src="assets/img/station-1.jpeg" alt="Turhan Akaryakıt istasyon fotoğrafı" /></figure>
+          <figure class="gallery-item"><img src="assets/img/wc-1.jpeg" alt="Lavabo alanı" /></figure>
+          <figure class="gallery-item"><img src="assets/img/wc-2.jpeg" alt="WC kabin alanı" /></figure>
+          <figure class="gallery-item"><img src="assets/img/wc-3.jpeg" alt="Lavabo ve ayna alanı" /></figure>
+          <figure class="gallery-item"><img src="assets/img/tchibo.webp" alt="Tchibo kahve görseli" /></figure>
+          <figure class="gallery-item"><img src="assets/img/station-2.jpeg" alt="Turhan Akaryakıt ikinci fotoğraf" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="iletisim">
+      <div class="container contact-grid">
+        <div>
+          <p class="section-tag">İletişim</p>
+          <h2>Bize hızlıca ulaşın.</h2>
+          <div class="contact-list">
+            <a href="tel:03327557434">📞 Sabit Hat: 0332 755 74 34</a>
+            <a href="tel:05336970531">📱 Cep: 0533 697 05 31</a>
+            <a href="https://wa.me/905336970531" target="_blank" rel="noopener">💬 WhatsApp: 0533 697 05 31</a>
+            <a href="https://maps.app.goo.gl/qP37bb31LNHwsw4eA?g_st=ic" target="_blank" rel="noopener">📍 Konum için tıklayın</a>
+            <a href="odeme/">💳 Ödeme sayfasına git</a>
+          </div>
+        </div>
+
+        <div class="contact-box">
+          <h3>Hızlı Erişim</h3>
+          <p>Ana sayfadan WhatsApp, konum ve ödeme sayfasına doğrudan geçiş eklenmiştir.</p>
           <div class="quick-actions">
-            <a class="btn btn-primary" href="https://wa.me/905336970531" target="_blank" rel="noopener">WhatsApp Yaz</a>
-            <a class="btn btn-secondary" href="../index.html">Ana Sayfaya Dön</a>
+            <a class="btn btn-primary full" href="odeme/">Ödeme Sayfası</a>
+            <a class="btn btn-secondary full" href="https://wa.me/905336970531" target="_blank" rel="noopener">WhatsApp Yaz</a>
+            <a class="btn btn-secondary full" href="https://maps.app.goo.gl/qP37bb31LNHwsw4eA?g_st=ic" target="_blank" rel="noopener">Haritada Aç</a>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <a class="floating-wa" href="https://wa.me/905336970531" target="_blank" rel="noopener" aria-label="WhatsApp ile iletişim kur">WhatsApp</a>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Turhan Akaryakıt. Tüm hakları saklıdır.</p>
+      <a href="#anasayfa">Yukarı Dön ↑</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
