@@ -8,13 +8,72 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet"  />
+
+  <style>
+    :root{--green:#116b48;--green2:#1f8a5b;--bg:#f6f8f7;--text:#1f2937}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.5}
+    img{max-width:100%;display:block}
+    a{text-decoration:none}
+    .container{width:min(1120px,92%);margin:auto}
+    .topbar{position:sticky;top:0;background:#fff;border-bottom:1px solid #e5e7eb;z-index:10}
+    .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .logo img{height:52px;width:auto;border-radius:10px}
+    .nav{display:flex;gap:16px;flex-wrap:wrap}
+    .nav a{color:#1f2937;font-weight:600}
+    .top-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .mini-btn,.btn{border-radius:12px;padding:10px 16px;font-weight:700;display:inline-block}
+    .mini-btn{background:#eef7f1;color:var(--green)}
+    .whatsapp{background:#dcfce7}
+    .menu-btn{display:none}
+    .hero{background:linear-gradient(135deg,#0f5132,#1f8a5b);color:#fff;padding:48px 0}
+    .hero-grid,.two-col,.contact-grid,.quick-grid{display:grid;gap:28px}
+    .hero-grid{grid-template-columns:1.15fr .85fr;align-items:center}
+    .eyebrow,.section-tag{font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+    h1{font-size:52px;line-height:1.05;margin:10px 0 16px}
+    h2{font-size:36px;line-height:1.15;margin:0 0 14px}
+    .hero-text{font-size:18px;opacity:.96}
+    .hero-actions,.quick-actions,.contact-list,.hero-points{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{background:#fff;color:var(--green)}
+    .btn-secondary{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.28)}
+    .glass,.card,.quick-card,.brand-box,.contact-box{background:#fff;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+    .hero-image-card img{border-radius:18px;aspect-ratio:4/3;object-fit:cover}
+    .hero-stats{display:grid;grid-template-columns:1fr;gap:12px;margin-top:16px}
+    .stat-card{padding:16px;color:#111}
+    .stat-card strong a{color:var(--green)}
+    .section{padding:68px 0}
+    .alt,.quick-section{background:var(--bg)}
+    .center{text-align:center}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card,.quick-card,.contact-box{padding:22px}
+    .brand-logos.four-col,.gallery.four,.gallery.three{display:grid;gap:18px}
+    .brand-logos.four-col{grid-template-columns:repeat(4,1fr)}
+    .gallery.four{grid-template-columns:repeat(4,1fr)}
+    .gallery.three{grid-template-columns:repeat(3,1fr)}
+    .gallery-item img,.about-card img,.utts-visual img{width:100%;height:100%;object-fit:cover;border-radius:18px}
+    .about-grid,.utts-grid,.contact-grid{grid-template-columns:1fr 1fr;align-items:center}
+    .quick-grid{grid-template-columns:repeat(3,1fr)}
+    .quick-card{color:inherit}
+    .quick-icon{font-size:32px;margin-bottom:8px}
+    .contact-list a,.contact-list span{display:block;color:var(--green);font-weight:700}
+    .floating-wa{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;padding:14px 18px;border-radius:999px;font-weight:800;box-shadow:0 10px 25px rgba(0,0,0,.15)}
+    .footer{background:#0f172a;color:#fff}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:16px}
+    .footer a{color:#fff}
+    @media (max-width:900px){
+      .nav,.top-actions{display:none}.menu-btn{display:block}
+      h1{font-size:38px}.h2{font-size:28px}
+      .hero-grid,.cards,.brand-logos.four-col,.gallery.four,.gallery.three,.about-grid,.utts-grid,.contact-grid,.quick-grid{grid-template-columns:1fr}
+      .section{padding:52px 0}
+    }
+  </style>
+
 </head>
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
       <a href="#anasayfa" class="logo">
-        <img src="assets/img/turhan-logo.png" alt="Turhan Akaryakıt Logo" />
+        <img src="bp-po.png" alt="Turhan Akaryakıt Logo" />
       </a>
 
       <nav class="nav" id="nav">
@@ -63,7 +122,7 @@
 
         <div class="hero-panel">
           <div class="hero-image-card glass">
-            <img src="assets/img/station-1.jpeg" alt="Turhan Akaryakıt istasyon görünümü" />
+            <img src="station-1.jpeg" alt="Turhan Akaryakıt istasyon görünümü" />
           </div>
           <div class="hero-stats">
             <div class="stat-card glass">
@@ -116,7 +175,7 @@
           </p>
         </div>
         <div class="about-card">
-          <img src="assets/img/station-2.jpeg" alt="Turhan Akaryakıt gece görünümü" />
+          <img src="station-2.jpeg" alt="Turhan Akaryakıt gece görünümü" />
         </div>
       </div>
     </section>
@@ -151,10 +210,10 @@
         <p class="section-tag center">Markalar</p>
         <h2 class="center">İş ortaklarımız ve hizmet alanlarımız</h2>
         <div class="brand-logos four-col">
-          <div class="brand-box"><img src="assets/img/bp-po.png" alt="BP ve Petrol Ofisi logoları" /></div>
-          <div class="brand-box stack-brand"><img src="assets/img/tchibo-logo.png" alt="Tchibo logo" class="tchibo-logo" /><span>Market Plus</span></div>
-          <div class="brand-box stack-brand"><img src="assets/img/utts-banner.png" alt="UTTS Yetkili Taşıt Montaj Servisi" class="utts-banner" /><span>UTTS Bölge Anabayi</span></div>
-          <div class="brand-box"><img src="assets/img/turhan-logo.png" alt="Turhan Akaryakıt logo" /></div>
+          <div class="brand-box"><img src="bp-po.png" alt="BP ve Petrol Ofisi logoları" /></div>
+          <div class="brand-box stack-brand"><img src="cafe-1.jpeg" alt="Tchibo logo" class="tchibo-logo" /><span>Market Plus</span></div>
+          <div class="brand-box stack-brand"><img src="bp-po.png" alt="UTTS Yetkili Taşıt Montaj Servisi" class="utts-banner" /><span>UTTS Bölge Anabayi</span></div>
+          <div class="brand-box"><img src="bp-po.png" alt="Turhan Akaryakıt logo" /></div>
         </div>
       </div>
     </section>
@@ -165,10 +224,10 @@
         <h2>Market Plus ve Tchibo alanı</h2>
         <p class="section-intro">Tchibo alanının altına Market Plus bilgisi ve market içi görseller eklendi.</p>
         <div class="gallery market-gallery four">
-          <figure class="gallery-item"><img src="assets/img/market-1.jpeg" alt="Market içi görsel 1" /></figure>
-          <figure class="gallery-item"><img src="assets/img/market-2.jpeg" alt="Market içi görsel 2" /></figure>
-          <figure class="gallery-item"><img src="assets/img/market-3.jpeg" alt="Market içi görsel 3" /></figure>
-          <figure class="gallery-item"><img src="assets/img/cafe-1.jpeg" alt="Cafe ve oturma alanı" /></figure>
+          <figure class="gallery-item"><img src="market-1.jpeg" alt="Market içi görsel 1" /></figure>
+          <figure class="gallery-item"><img src="market-2.jpeg" alt="Market içi görsel 2" /></figure>
+          <figure class="gallery-item"><img src="market-3.jpeg" alt="Market içi görsel 3" /></figure>
+          <figure class="gallery-item"><img src="cafe-1.jpeg" alt="Cafe ve oturma alanı" /></figure>
         </div>
       </div>
     </section>
@@ -188,8 +247,8 @@
           </div>
         </div>
         <div class="utts-boxes">
-          <div class="brand-box utts-visual"><img src="assets/img/utts-banner.png" alt="UTTS banner" /></div>
-          <div class="brand-box utts-visual"><img src="assets/img/utts-device.jpeg" alt="UTTS cihaz görseli" /></div>
+          <div class="brand-box utts-visual"><img src="bp-po.png" alt="UTTS banner" /></div>
+          <div class="brand-box utts-visual"><img src="station-1.jpeg" alt="UTTS cihaz görseli" /></div>
         </div>
       </div>
     </section>
@@ -199,12 +258,12 @@
         <p class="section-tag center">Galeri</p>
         <h2 class="center">İstasyon, market ve sosyal alanlardan kareler</h2>
         <div class="gallery wc-gallery three">
-          <figure class="gallery-item"><img src="assets/img/station-1.jpeg" alt="Turhan Akaryakıt istasyon fotoğrafı" /></figure>
-          <figure class="gallery-item"><img src="assets/img/wc-1.jpeg" alt="Lavabo alanı" /></figure>
-          <figure class="gallery-item"><img src="assets/img/wc-2.jpeg" alt="WC kabin alanı" /></figure>
-          <figure class="gallery-item"><img src="assets/img/wc-3.jpeg" alt="Lavabo ve ayna alanı" /></figure>
-          <figure class="gallery-item"><img src="assets/img/tchibo.webp" alt="Tchibo kahve görseli" /></figure>
-          <figure class="gallery-item"><img src="assets/img/station-2.jpeg" alt="Turhan Akaryakıt ikinci fotoğraf" /></figure>
+          <figure class="gallery-item"><img src="station-1.jpeg" alt="Turhan Akaryakıt istasyon fotoğrafı" /></figure>
+          <figure class="gallery-item"><img src="market-1.jpeg" alt="Lavabo alanı" /></figure>
+          <figure class="gallery-item"><img src="market-2.jpeg" alt="WC kabin alanı" /></figure>
+          <figure class="gallery-item"><img src="market-3.jpeg" alt="Lavabo ve ayna alanı" /></figure>
+          <figure class="gallery-item"><img src="cafe-1.jpeg" alt="Tchibo kahve görseli" /></figure>
+          <figure class="gallery-item"><img src="station-2.jpeg" alt="Turhan Akaryakıt ikinci fotoğraf" /></figure>
         </div>
       </div>
     </section>
@@ -245,6 +304,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  
 </body>
 </html>
