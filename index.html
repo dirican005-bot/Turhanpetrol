@@ -1,603 +1,411 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Turhan Akaryakıteeeee | Karapınar / Konya</title>
-  <meta name="description" content="Turhan Akaryakıt - Akaryakıt, Market Plus, Tchibo, UTTS ve iletişim bilgileri.">
-  <style>
-    :root{
-      --green:#2f7449;
-      --green-dark:#245d3a;
-      --bg:#f4f6f5;
-      --text:#1c1c1c;
-      --muted:#5f6662;
-      --radius:24px;
-      --shadow:0 12px 28px rgba(0,0,0,.12);
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff;color:var(--text)}
-    img{max-width:100%;display:block}
-    a{text-decoration:none;color:inherit}
-    .container{width:min(1160px,92%);margin:auto}
+<title>Turhan Akaryakıt | Karapınar / Konya</title>
 
-    .topbar{
-      position:sticky;
-      top:0;
-      z-index:30;
-      background:rgba(255,255,255,.95);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid #e8ece9;
-    }
-    .topbar-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:14px 0;
-      gap:16px;
-    }
-    .logo img{height:58px;width:auto}
-    .nav{display:flex;gap:24px;align-items:center;font-weight:700}
-    .nav a:hover{color:var(--green)}
-    .menu-btn{
-      display:none;
-      border:0;
-      background:#eef3ef;
-      color:#4c8be7;
-      border-radius:16px;
-      padding:12px 14px;
-      font-size:22px;
-      cursor:pointer;
-    }
+<style>
 
-    /* HERO SLIDER */
-    .hero{
-      position:relative;
-      min-height:900px;
-      overflow:hidden;
-      background:#000;
-    }
-    .hero-slider{
-      position:absolute;
-      inset:0;
-      z-index:0;
-    }
-    .hero-slide{
-      position:absolute;
-      inset:0;
-      opacity:0;
-      transition:opacity 1s ease;
-    }
-    .hero-slide.active{opacity:1}
-    .hero-slide img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      object-position:center center;
-      filter:brightness(.55);
-      transform:scale(1.03);
-      transition:transform 6s ease;
-    }
-    .hero-slide.active img{
-      transform:scale(1);
-    }
-    .hero-overlay{
-      position:absolute;
-      inset:0;
-      z-index:1;
-      background:linear-gradient(to bottom, rgba(0,0,0,.12) 0%, rgba(0,0,0,.20) 35%, rgba(0,0,0,.48) 100%);
-    }
-    .hero-content{
-      position:relative;
-      z-index:2;
-      min-height:900px;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:flex-end;
-      text-align:center;
-      color:#fff;
-      padding:0 0 170px;
-    }
-    .hero h1{
-      font-size:72px;
-      line-height:1.05;
-      margin:0 0 14px;
-      text-shadow:0 8px 24px rgba(0,0,0,.35);
-    }
-    .hero h2{
-      font-size:28px;
-      margin:0 0 12px;
-      text-shadow:0 8px 24px rgba(0,0,0,.35);
-    }
-    .hero p{
-      font-size:22px;
-      margin:0 0 28px;
-      text-shadow:0 8px 24px rgba(0,0,0,.35);
-    }
-    .hero .cta{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-width:320px;
-      max-width:90%;
-      padding:16px 28px;
-      font-size:24px;
-      font-weight:800;
-      border-radius:18px;
-      background:rgba(47,116,73,.95);
-      color:#fff;
-      box-shadow:var(--shadow);
-      border:2px solid rgba(255,255,255,.18);
-    }
+:root{
+--green:#2f7449;
+--bg:#f4f6f5;
+--text:#1c1c1c;
+--muted:#5f6662;
+--shadow:0 12px 28px rgba(0,0,0,.12);
+}
 
-    .hero-arrow{
-      position:absolute;
-      top:50%;
-      transform:translateY(-50%);
-      z-index:3;
-      width:54px;
-      height:54px;
-      border:none;
-      border-radius:50%;
-      background:rgba(255,255,255,.18);
-      color:#fff;
-      font-size:26px;
-      cursor:pointer;
-      backdrop-filter:blur(8px);
-      transition:.2s ease;
-    }
-    .hero-arrow:hover{background:rgba(255,255,255,.28)}
-    .hero-arrow.prev{left:24px}
-    .hero-arrow.next{right:24px}
+body{
+margin:0;
+font-family:Arial;
+color:var(--text);
+}
 
-    .hero-dots{
-      position:absolute;
-      left:50%;
-      bottom:38px;
-      transform:translateX(-50%);
-      z-index:3;
-      display:flex;
-      gap:10px;
-    }
-    .hero-dot{
-      width:12px;
-      height:12px;
-      border-radius:50%;
-      border:none;
-      background:rgba(255,255,255,.45);
-      cursor:pointer;
-      transition:.2s ease;
-    }
-    .hero-dot.active{
-      background:#fff;
-      transform:scale(1.15);
-    }
+.container{
+width:min(1160px,92%);
+margin:auto;
+}
 
-    .section{padding:72px 0}
-    .section.alt{background:var(--bg)}
-    .section-title{
-      text-align:center;
-      color:var(--green);
-      font-size:58px;
-      font-weight:900;
-      letter-spacing:.5px;
-      margin:0 0 28px;
-    }
+/* TOPBAR */
 
-    .services-wrap{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:34px;
-      align-items:center;
-    }
-    .brand-row{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:26px;
-      margin-bottom:20px;
-    }
-    .brand-row img{max-height:84px;object-fit:contain}
-    .brand-row .po{max-width:310px}
-    .brand-row .bp{max-width:180px}
-    .brand-row .tchibo{max-width:250px}
+.topbar{
+position:sticky;
+top:0;
+background:white;
+z-index:20;
+border-bottom:1px solid #eee;
+}
 
-    .service-list{
-      margin:0 0 26px;
-      padding:0;
-      list-style:none;
-      font-size:38px;
-      line-height:1.6;
-    }
-    .service-list li{
-      display:flex;
-      gap:16px;
-      align-items:flex-start;
-      margin:10px 0;
-    }
-    .service-list li::before{
-      content:'✔';
-      color:var(--green);
-      font-weight:900;
-    }
+.topbar-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 0;
+}
 
-    .action-row{display:flex;gap:22px;flex-wrap:wrap}
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:14px 22px;
-      border-radius:14px;
-      font-size:22px;
-      font-weight:800;
-      box-shadow:var(--shadow);
-    }
-    .btn.green{background:var(--green);color:#fff}
-    .btn.light{background:#fff;border:1px solid #e1e7e3}
+.nav{
+display:flex;
+gap:24px;
+font-weight:700;
+}
 
-    .card-photo img{
-      border-radius:24px;
-      box-shadow:var(--shadow);
-    }
+.logo img{
+height:55px;
+}
 
-    .contact-grid{
-      display:grid;
-      grid-template-columns:420px 1fr;
-      gap:34px;
-      align-items:center;
-    }
-    .contact-box{
-      background:#fff;
-      border-radius:28px;
-      box-shadow:var(--shadow);
-      padding:34px;
-    }
-    .contact-box h3{
-      font-size:58px;
-      color:var(--green);
-      margin:0 0 18px;
-    }
-    .contact-item{
-      font-size:34px;
-      font-weight:800;
-      margin:24px 0;
-    }
-    .contact-actions{
-      display:grid;
-      gap:14px;
-      margin-top:20px;
-    }
+/* HERO */
 
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:22px;
-    }
-    .card{
-      background:#fff;
-      border-radius:24px;
-      box-shadow:var(--shadow);
-      overflow:hidden;
-    }
-    .card .p{padding:18px}
-    .card h4{
-      font-size:34px;
-      margin:0 0 8px;
-    }
-    .card p{
-      font-size:21px;
-      color:var(--muted);
-      line-height:1.55;
-      margin:0;
-    }
+.hero{
+position:relative;
+height:90vh;
+overflow:hidden;
+background:black;
+}
 
-    .two-col{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:22px;
-    }
-    .info{
-      background:#fff;
-      border-radius:24px;
-      box-shadow:var(--shadow);
-      padding:28px;
-    }
-    .info h3{
-      margin:0 0 12px;
-      font-size:42px;
-      color:var(--green);
-    }
-    .info p{
-      font-size:22px;
-      line-height:1.65;
-      color:var(--muted);
-    }
-    .info img{
-      border-radius:18px;
-      margin-top:16px;
-    }
+.hero img{
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(.55);
+}
 
-    .floating-wa{
-      position:fixed;
-      right:18px;
-      bottom:18px;
-      z-index:22;
-      background:#75d36a;
-      color:#fff;
-      padding:14px 22px;
-      border-radius:999px;
-      font-size:18px;
-      font-weight:900;
-      box-shadow:var(--shadow);
-    }
+.hero-content{
+position:absolute;
+bottom:160px;
+left:0;
+right:0;
+text-align:center;
+color:white;
+}
 
-    .footer{
-      background:linear-gradient(135deg,#14452a,#2f7449);
-      color:#fff;
-      padding:24px 0;
-      margin-top:28px;
-    }
-    .footer-inner{
-      display:flex;
-      justify-content:space-between;
-      gap:18px;
-      align-items:center;
-      font-size:18px;
-    }
+.hero h1{
+font-size:70px;
+margin:0;
+}
 
-    @media (max-width:980px){
-      .nav{
-        display:none;
-        position:absolute;
-        top:86px;
-        left:4%;
-        right:4%;
-        background:#fff;
-        border-radius:18px;
-        box-shadow:var(--shadow);
-        padding:16px;
-        flex-direction:column;
-        align-items:flex-start;
-      }
-      .nav.open{display:flex}
-      .menu-btn{display:block}
-      .logo img{height:46px}
+.hero h2{
+font-size:28px;
+margin:10px 0;
+}
 
-      .hero{min-height:980px}
-      .hero-content{
-        min-height:980px;
-        padding:0 0 220px;
-      }
-      .hero h1{font-size:42px}
-      .hero h2{font-size:24px}
-      .hero p{font-size:18px}
-      .hero .cta{
-        min-width:0;
-        width:auto;
-        font-size:20px;
-        padding:14px 24px;
-      }
-      .hero-arrow{
-        width:46px;
-        height:46px;
-        font-size:22px;
-      }
-      .hero-arrow.prev{left:12px}
-      .hero-arrow.next{right:12px}
+.hero p{
+font-size:22px;
+}
 
-      .section{padding:54px 0}
-      .section-title{font-size:34px}
-      .services-wrap,.contact-grid,.cards,.two-col{grid-template-columns:1fr}
-      .brand-row{justify-content:center;flex-wrap:wrap}
-      .brand-row .po,.brand-row .bp,.brand-row .tchibo{max-width:180px}
-      .service-list{font-size:26px}
-      .btn{font-size:18px;padding:12px 16px}
-      .contact-box h3{font-size:32px}
-      .contact-item{font-size:22px}
-      .card h4{font-size:26px}
-      .card p,.info p{font-size:18px}
-      .info h3{font-size:30px}
-      .floating-wa{font-size:16px;padding:12px 18px}
-      .footer-inner{flex-direction:column;text-align:center}
-    }
-  </style>
+.cta{
+display:inline-block;
+margin-top:20px;
+padding:16px 32px;
+background:var(--green);
+color:white;
+font-weight:800;
+border-radius:16px;
+font-size:22px;
+}
+
+/* SECTION */
+
+.section{
+padding:70px 0;
+}
+
+.section.alt{
+background:var(--bg);
+}
+
+.section-title{
+text-align:center;
+color:var(--green);
+font-size:52px;
+margin-bottom:30px;
+}
+
+/* HAKKIMIZDA */
+
+.about-box{
+max-width:900px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:var(--shadow);
+}
+
+.about-badge{
+display:inline-block;
+background:var(--green);
+color:white;
+padding:12px 20px;
+border-radius:40px;
+font-weight:800;
+margin-bottom:20px;
+}
+
+.about-box p{
+font-size:20px;
+line-height:1.8;
+color:var(--muted);
+}
+
+.about-sign{
+margin-top:20px;
+font-weight:800;
+color:var(--green);
+font-size:22px;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.service-list{
+font-size:30px;
+list-style:none;
+padding:0;
+}
+
+.service-list li{
+margin:10px 0;
+}
+
+.service-list li:before{
+content:"✔ ";
+color:var(--green);
+}
+
+.btn{
+padding:14px 20px;
+background:var(--green);
+color:white;
+border-radius:12px;
+font-size:20px;
+font-weight:700;
+display:inline-block;
+margin:6px;
+}
+
+/* CONTACT */
+
+.contact-box{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:var(--shadow);
+max-width:420px;
+}
+
+.contact-item{
+font-size:28px;
+margin:20px 0;
+font-weight:800;
+}
+
+/* FLOATING WHATSAPP */
+
+.floating-wa{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#4ac959;
+color:white;
+padding:14px 22px;
+border-radius:50px;
+font-weight:800;
+font-size:18px;
+}
+
+/* FOOTER */
+
+.footer{
+background:#2f7449;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:40px;
+}
+
+.services{
+grid-template-columns:1fr;
+}
+
+.section-title{
+font-size:32px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="logo" href="#anasayfa"><img src="turhan-logo.png" alt="Turhan Akaryakıt logo"></a>
-      <nav class="nav" id="nav">
-        <a href="#anasayfa">Ana Sayfa</a>
-        <a href="#hizmetler">Hizmetler</a>
-        <a href="#iletisim">İletişim</a>
-        <a href="#market">Market Plus</a>
-        <a href="#utts">UTTS</a>
-        <a href="#odeme">Ödeme</a>
-      </nav>
-      <button class="menu-btn" id="menuBtn">☰</button>
-    </div>
-  </header>
 
-  <section class="hero" id="anasayfa">
-    <div class="hero-slider">
-      <div class="hero-slide active"><img src="station-2.png" alt="Turhan Akaryakıt istasyon görünümü"></div>
-      <div class="hero-slide"><img src="station-1.jpeg" alt="Turhan Akaryakıt istasyon görünümü 2"></div>
-      <div class="hero-slide"><img src="market-2.jpeg" alt="Market alanı"></div>
-    </div>
+<header class="topbar">
+<div class="container topbar-inner">
 
-    <div class="hero-overlay"></div>
+<a class="logo" href="#"><img src="turhan-logo.png"></a>
 
-    <button class="hero-arrow prev" id="prevSlide">&#10094;</button>
-    <button class="hero-arrow next" id="nextSlide">&#10095;</button>
+<nav class="nav">
+<a href="#anasayfa">Ana Sayfa</a>
+<a href="#hakkimizda">Hakkımızda</a>
+<a href="#hizmetler">Hizmetler</a>
+<a href="#iletisim">İletişim</a>
+</nav>
 
-    <div class="hero-dots" id="heroDots">
-      <button class="hero-dot active" data-slide="0"></button>
-      <button class="hero-dot" data-slide="1"></button>
-      <button class="hero-dot" data-slide="2"></button>
-    </div>
+</div>
+</header>
 
-    <div class="container hero-content">
-      <h1>Turhan Akaryakıt</h1>
-      <h2>Modern Petrol Ofisi Bayii</h2>
-      <p>Karapınar / Konya</p>
-      <a class="cta" href="#iletisim">İletişim</a>
-    </div>
-  </section>
 
-  <section class="section" id="hizmetler">
-    <div class="container">
-      <h3 class="section-title">HİZMETLERİMİZ</h3>
-      <div class="services-wrap">
-        <div>
-          <div class="brand-row">
-            <img class="po" src="bp-po.png" alt="Petrol Ofisi ve BP">
-            <img class="tchibo" src="tchibo-logo.png" alt="Tchibo">
-          </div>
-          <ul class="service-list">
-            <li>Akaryakıt Otogaz Satışı</li>
-            <li>Ultra Plus Market</li>
-            <li>Tchibo Kahve</li>
-            <li>Turhan Otomotiv</li>
-            <li>Oto Yıkama</li>
-            <li>UTTS Montaj Servisi Bölge Anabayi</li>
-          </ul>
-          <div class="action-row">
-            <a class="btn green" href="https://maps.app.goo.gl/qP37bb31LNHwsw4eA?g_st=ic" target="_blank">📍 Konum</a>
-            <a class="btn green" href="#odeme">💳 Ödeme</a>
-            <a class="btn green" href="https://turhanpetrol.com/odeme" target="_blank">💬 Online Ödeme Sayfası</a>
-          </div>
-        </div>
-        <div class="card-photo"><img src="cafe-1.jpeg" alt="Cafe alanı"></div>
-      </div>
-    </div>
-  </section>
+<!-- HERO -->
 
-  <section class="section alt" id="iletisim">
-    <div class="container contact-grid">
-      <div class="contact-box">
-        <h3>İLETİŞİM</h3>
-        <div class="contact-item">📞 0332 755 74 34</div>
-        <div class="contact-item">💬 0533 697 05 31</div>
-        <div class="contact-actions">
-          <a class="btn green" href="https://maps.app.goo.gl/qP37bb31LNHwsw4eA?g_st=ic" target="_blank">📍 Konum</a>
-          <a class="btn light" href="https://maps.app.goo.gl/qP37bb31LNHwsw4eA?g_st=ic" target="_blank">Haritada Aç</a>
-          <a class="btn green" href="https://wa.me/905336970531" target="_blank">WhatsApp Yaz</a>
-          <a class="btn light" href="https://turhanpetrol.com/odeme" target="_blank">Ödeme Sayfası</a>
-        </div>
-      </div>
-      <div class="card-photo"><img src="station-1.jpeg" alt="İstasyon fotoğrafı"></div>
-    </div>
-  </section>
+<section class="hero" id="anasayfa">
 
-  <section class="section" id="market">
-    <div class="container">
-      <h3 class="section-title">MARKET PLUS &amp; TCHIBO</h3>
-      <div class="cards">
-        <div class="card"><img src="market-1.jpeg" alt="Market görseli 1"><div class="p"><h4>Market Plus</h4><p>Tchibo alanının altında market plus bölümü ve ürün rafları gösterilir.</p></div></div>
-        <div class="card"><img src="market-2.jpeg" alt="Market görseli 2"><div class="p"><h4>Tchibo Cafe</h4><p>Kahve ve hızlı atıştırmalık alanı sade ve kurumsal biçimde sunulur.</p></div></div>
-        <div class="card"><img src="market-3.jpeg" alt="Market görseli 3"><div class="p"><h4>Geniş Ürün Alanı</h4><p>Market ürünleri ve dinlenme alanı dijitalde daha güçlü görünür.</p></div></div>
-      </div>
-    </div>
-  </section>
+<img src="station-1.jpeg">
 
-  <section class="section alt" id="utts">
-    <div class="container two-col">
-      <div class="info">
-        <h3>UTTS Bölge Anabayi</h3>
-        <p>Market bölümünün altına UTTS hizmet alanı eklendi. Tanıtım görseli ve cihaz görseli bu bölümde gösterilir.</p>
-        <a class="btn green" href="https://wa.me/905336970531" target="_blank">UTTS için WhatsApp</a>
-      </div>
-      <div class="cards" style="grid-template-columns:1fr 1fr">
-        <div class="card"><img src="utts-banner.png" alt="UTTS banner"></div>
-        <div class="card"><img src="utts-device.jpeg" alt="UTTS cihazı"></div>
-      </div>
-    </div>
-  </section>
+<div class="hero-content">
 
-  <section class="section" id="odeme">
-    <div class="container two-col">
-      <div class="info">
-        <h3>Ödeme</h3>
-        <p>Ödeme sayfası ayrı klasör istemeden ana sayfa içine eklendi. İstersen sonradan gerçek online ödeme sistemi bağlanabilir.</p>
-        <a class="btn green" href="https://turhanpetrol.com/odeme" target="_blank">Kredi Kartı ile online ödeme için tıklayınız</a>
-      </div>
-      <div class="info">
-        <h3>Temizlik ve Sosyal Alan</h3>
-        <p>Modern lavabo, WC ve oturma alanları da siteye eklendi.</p>
-        <img src="wc-1.jpeg" alt="Lavabo alanı">
-      </div>
-    </div>
-  </section>
+<h1>Turhan Akaryakıt</h1>
+<h2>Modern Petrol Ofisi Bayii</h2>
+<p>Karapınar / Konya</p>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span>DiricanPro © 2026 Turhan Akaryakıt</span>
-      <span>Karapınar / Konya</span>
-    </div>
-  </footer>
+<a class="cta" href="#iletisim">İletişim</a>
 
-  <a class="floating-wa" href="https://wa.me/905336970531" target="_blank">WhatsApp</a>
+</div>
 
-  <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const nav = document.getElementById('nav');
-    menuBtn.addEventListener('click', () => nav.classList.toggle('open'));
+</section>
 
-    const slides = document.querySelectorAll('.hero-slide');
-    const dots = document.querySelectorAll('.hero-dot');
-    const prevBtn = document.getElementById('prevSlide');
-    const nextBtn = document.getElementById('nextSlide');
-    let currentSlide = 0;
-    let slideInterval;
 
-    function showSlide(index){
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-        dots[i].classList.toggle('active', i === index);
-      });
-      currentSlide = index;
-    }
+<!-- HAKKIMIZDA -->
 
-    function nextSlide(){
-      let newIndex = (currentSlide + 1) % slides.length;
-      showSlide(newIndex);
-    }
+<section class="section alt" id="hakkimizda">
 
-    function prevSlideFunc(){
-      let newIndex = (currentSlide - 1 + slides.length) % slides.length;
-      showSlide(newIndex);
-    }
+<div class="container">
 
-    function startSlider(){
-      slideInterval = setInterval(nextSlide, 4000);
-    }
+<h3 class="section-title">Hakkımızda</h3>
 
-    function resetSlider(){
-      clearInterval(slideInterval);
-      startSlider();
-    }
+<div class="about-box">
 
-    nextBtn.addEventListener('click', () => {
-      nextSlide();
-      resetSlider();
-    });
+<div class="about-badge">
+1968'den günümüze Kalite ve Güvenin adresi
+</div>
 
-    prevBtn.addEventListener('click', () => {
-      prevSlideFunc();
-      resetSlider();
-    });
+<p>
+Turhan Akaryakıt sektörün ilklerinden biri olarak 1968 yılından bugüne aynı adresinde hizmet vermektedir.
+Duran Sezer ve oğulları olarak temeli atılan aile şirketimiz ticari hayatına 1942 yılında başlamıştır.
+</p>
 
-    dots.forEach(dot => {
-      dot.addEventListener('click', () => {
-        showSlide(parseInt(dot.dataset.slide));
-        resetSlider();
-      });
-    });
+<p>
+Sektöründe uzun yıllardır kalite ve istikrar içinde prensiplerinden ödün vermeden yoluna devam eden markamız güvenilir hizmet anlayışıyla bölgesinde önemli bir konuma sahiptir.
+</p>
 
-    startSlider();
-  </script>
+<p>
+İlk günden beri dünya devi BP (British Petroleum) ile çalışan istasyonumuz güzergâh üzerinde bilinen ve tercih edilen nadir istasyonlardan biridir.
+</p>
+
+<p>
+Müşteri memnuniyetini sağlamak amacıyla yatırımlarını sürekli sürdüren firmamız istasyonunu günümüz standartlarına uygun şekilde geliştirmeye devam etmektedir.
+</p>
+
+<p>
+3.800 m² alana kurulu olan istasyonumuz şehir içi ve Adana – Konya çevre yoluna hizmet vermektedir.
+</p>
+
+<p class="about-sign">
+Karapınar BP - Turhan Akaryakıt Ltd. Şti.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HİZMETLER -->
+
+<section class="section" id="hizmetler">
+
+<div class="container">
+
+<h3 class="section-title">Hizmetlerimiz</h3>
+
+<div class="services">
+
+<ul class="service-list">
+<li>Akaryakıt Satışı</li>
+<li>Otogaz</li>
+<li>Ultra Plus Market</li>
+<li>Tchibo Kahve</li>
+<li>Turhan Otomotiv</li>
+<li>Oto Yıkama</li>
+<li>UTTS Montaj Servisi</li>
+</ul>
+
+<img src="market-2.jpeg">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- İLETİŞİM -->
+
+<section class="section alt" id="iletisim">
+
+<div class="container">
+
+<h3 class="section-title">İletişim</h3>
+
+<div class="contact-box">
+
+<div class="contact-item">
+📞 0332 755 74 34
+</div>
+
+<div class="contact-item">
+💬 0533 697 05 31
+</div>
+
+<a class="btn" href="https://maps.app.goo.gl/qP37bb31LNHwsw4eA" target="_blank">
+Konum
+</a>
+
+<a class="btn" href="https://wa.me/905336970531" target="_blank">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer class="footer">
+
+DiricanPro © 2026 Turhan Akaryakıt  
+Karapınar / Konya
+
+</footer>
+
+
+<a class="floating-wa" href="https://wa.me/905336970531">
+WhatsApp
+</a>
+
+
 </body>
 </html>
